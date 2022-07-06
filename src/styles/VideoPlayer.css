@@ -1,0 +1,261 @@
+.videoContainer{
+    padding: 0;
+    position: relative;
+}
+
+.player{
+    height: auto !important;
+    width: 100% !important;
+    justify-content: center;
+    display: flex;
+}
+
+.controls{
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    flex-direction: column;
+    position: absolute;
+    display: flex;
+    top: 0;
+    bottom: 0;
+}
+
+.video-overlay{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.video-top-controls{
+    height: 6% !important;
+}
+
+.video-middle-controls{
+    height: 100% !important;
+}
+
+.video-bottom-controls{
+    height: 3rem !important;
+    background-color: var( --primary-faded);
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.video-timeline{
+    margin-left: 0.3%;
+    margin-right: 0.3%;
+    flex-basis: 100%;
+}
+
+.iconContainer{
+    flex-basis: 100%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0.5%;
+    padding-right: 0.5%;
+    display: flex;
+}
+
+.icon{
+    color: var(--secondary);
+    font-size: 2rem;
+    margin-left: 1%;
+}
+.iconFullscreen{
+    color: var(--secondary);
+    font-size: 2.3rem;
+    margin-left: 1%;
+}
+
+.rc-slider-rail:hover,
+.rc-slider-track:hover,
+.iconFullscreen:hover,
+.icon:hover{
+    cursor: pointer;
+}
+
+.timeContainer{
+    text-align: center;
+    margin-left: 1%;
+    margin-right: 1%;
+    height: auto;
+}
+
+.time{
+    color: var(--text);
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: center;
+    line-height: 1.8;
+}
+
+.splitLeft{
+    flex-basis: 50%;
+    display: flex;
+    justify-content: flex-start;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -moz-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    align-items: center;
+}
+
+.splitRight{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -moz-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    justify-content: right;
+    align-items: center;
+}
+
+.rc-slider{
+    padding: 0 !important;
+    height: 5px !important;
+}
+
+.levels-container{
+    position: absolute;
+    margin-bottom: 2.2rem;
+    background-color: rgb(29, 29, 29);
+    opacity: 0;
+    border-top-width: 5px;
+    border-color: rgb(29, 29, 29);
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    overflow: hidden;
+}
+
+.settings{
+    position: relative;
+    justify-content: center;
+    align-items: flex-end;
+    display: flex;
+    margin-right: 1rem;
+}
+
+.settings:hover .levels-container{
+    animation: fadeIn 0.5s forwards;
+}
+
+.settings:not(:hover) .levels-container{
+    animation: fadeOut 0.5s forwards;
+}
+
+.level{
+    background-color: var( --primary-faded);
+    width: 3rem;
+    border-bottom: 1px solid;
+    border-color: #FFFFFF;
+}
+
+.level.active{
+    background-color: red;
+}
+
+.level:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.level-text{
+    color: #FFFFFF;
+    text-align: center;
+    margin: 0;
+}
+
+.video-volume-container{
+    width: 0;
+    opacity: 0;
+    line-height: 1;
+}
+.video-volume{
+    margin-left: 10%;
+}
+
+.volumeContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 1%;
+    margin-right: 1%;
+    height: 100%;
+}
+
+.volumeContainer:hover > .video-volume-container{
+    transition: 1s;
+    animation: fadeIn 0.5s forwards, slideIn 0.5s forwards, scaleIn 0.5s forwards !important;
+}
+
+.volumeContainer:not(:hover) > .video-volume-container{
+    transition: 1s;
+    animation: slideOut 0.5s forwards, fadeOut 0.5s forwards, scaleOut 0.5s forwards !important;
+}
+
+/*Animations*/
+@keyframes slideIn {
+    0% {
+      transform:translateX(-20%);
+    }
+    100% {
+      transform:translateX(0);
+    }
+  }
+
+  @keyframes slideOut {
+    0% {
+      transform:translateX(0);
+    }
+    100% {
+      transform:translateX(-20%);
+    }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+  }
+
+  @keyframes scaleIn {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 75px;
+    }
+  }
+
+  @keyframes scaleOut {
+    0% {
+        width: 75px;
+    }
+    100% {
+        width: 0;
+    }
+  }
