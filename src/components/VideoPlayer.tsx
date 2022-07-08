@@ -28,7 +28,7 @@ function VideoPlayer() {
   const [draggingTimeline, setDraggingTimeline] = useState<boolean>(false);
   const [dragValue, setDragValue] = useState<number>(0);
   const [volume, setVolume] = useState<number>(50);
-  const [playing, setPlaying] = useState<boolean>(true);
+  const [playing, setPlaying] = useState<boolean>(false);
   const [mute, setMuted] = useState<boolean>(false);
   const [playerLevels, setPlayerLevels] = useState<Level[]>([]);
   const [hlsOptions, setHlsOptions] = useState<Hls>({} as Hls);

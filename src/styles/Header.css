@@ -2,7 +2,7 @@
     background-color: var(--primary);
     opacity: 0.9;
     display: flex;
-    width: 100vw;
+    width: 100%;
     align-items: center;
     justify-content: space-between;
     align-content: center;
@@ -13,7 +13,7 @@
 
   .nav-right{
     height: 100%;
-    flex-basis: 49%;
+    flex-basis: 25%;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -23,16 +23,53 @@
 
   .nav-left{
     height: 100%;
-    flex-basis: 49%;
+    flex-basis: 25%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     padding-left: 3rem;
   }
 
+  .nav-middle{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-basis: 50%;
+  }
+
   .nav-item{
     height: 100%;
     line-height: 3.5rem;
+  }
+
+  .search-container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    position: relative;
+  }
+
+  .search{
+    height: 2rem;
+    border-radius: 5px;
+    font-family: "Arimo";
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 14pt;
+    width: 100%;
+    border-width: 0px;
+    outline: none;
+  }
+
+  .input-icon{
+    font-size: 22pt;
+    color: var(--primary);
+    text-align: center;
+    position: absolute;
+    right: 0;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
   }
 
   .nav-profile{
@@ -46,6 +83,7 @@
     color: var(--text);
     margin: 0;
     padding: 0 1rem;
+    font-family: 'Arimo';
   }
   
   .nav-title {
@@ -53,6 +91,7 @@
     margin: 0;
     padding: 0 1rem;
     line-height: 3.5rem;
+    font-family: 'Arimo';
   }
 
 /* Events */
