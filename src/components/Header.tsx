@@ -24,7 +24,7 @@ function Header() {
           <h3 className="nav-text">Trending</h3>
         </div>
         <div className="nav-item">
-          <h3 className="nav-text">Playlist</h3>
+          <h3 className="nav-text">Feed</h3>
         </div>
       </div>
       <div className="nav-middle">
